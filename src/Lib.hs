@@ -5,8 +5,8 @@ module Lib
 
 import Gen
 
-
-$(mkDataType (fst schema') schema')
+  -- let auth = Just (PasswordAuthenticator "cassandra" "cassandra")
+$(genAllTblDataTypes [("localhost", "9042")] "test1" (Just (PasswordAuthenticator "cassandra" "cassandra")))
 
 someFunc :: IO ()
 someFunc = undefined
