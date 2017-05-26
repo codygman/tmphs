@@ -6,7 +6,7 @@ module Lib
 import Gen
 
 
-$(f (fst schema') schema')
+$(mkDataType (fst schema') schema')
 
 someFunc :: IO ()
 someFunc = undefined
